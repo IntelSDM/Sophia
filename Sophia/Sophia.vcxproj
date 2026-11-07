@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{9a109d90-8816-4011-929e-2036ca1268b2}</ProjectGuid>
+    <RootNamespace>Sophia</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)Build\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Build/obj\$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)Build\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Build/obj\$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)Build\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Build/obj\$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)Build\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Build/obj\$(ProjectName)\$(Configuration)\</IntDir>
+    <IncludePath>$(SolutionDir)Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Sophia\Deobfuscator\DeobfEncoders.cpp" />
+    <ClCompile Include="Sophia\Deobfuscator\DeobfIO.cpp" />
+    <ClCompile Include="Sophia\Deobfuscator\DeobfValClassifier.cpp" />
+    <ClCompile Include="Sophia\Deobfuscator\Targets\Constants\ArithConstTarget.cpp" />
+    <ClCompile Include="Sophia\Deobfuscator\Targets\ControlFlow\CallParamTarget.cpp" />
+    <ClCompile Include="Sophia\Deobfuscator\Targets\ControlFlow\CFGWalkTarget.cpp" />
+    <ClCompile Include="Sophia\Deobfuscator\Targets\ControlFlow\CompareTarget.cpp" />
+    <ClCompile Include="Sophia\Deobfuscator\Targets\ControlFlow\IATTarget.cpp" />
+    <ClCompile Include="Sophia\Deobfuscator\Targets\ControlFlow\IndBranchTarget.cpp" />
+    <ClCompile Include="Sophia\Deobfuscator\Targets\Constants\LEAConstTarget.cpp" />
+    <ClCompile Include="Sophia\Deobfuscator\Targets\Constants\MovConstTarget.cpp" />
+    <ClCompile Include="Sophia\Deobfuscator\Targets\ControlFlow\OpaqueJCCTarget.cpp" />
+    <ClCompile Include="Sophia\Deobfuscator\Targets\ControlFlow\ROPTarget.cpp" />
+    <ClCompile Include="Sophia\Deobfuscator\Targets\Strings\StringBufferTarget.cpp" />
+    <ClCompile Include="Sophia\Deobfuscator\Targets\SyscallParamTarget.cpp" />
+    <ClCompile Include="Sophia\Deobfuscator\Targets\Strings\VecRedirectTarget.cpp" />
+    <ClCompile Include="Sophia\Environment\AppConfig.cpp" />
+    <ClCompile Include="Sophia\AutoDebugger\AutoDebugHits.cpp" />
+    <ClCompile Include="Sophia\AutoDebugger\AutoDebugPEUtils.cpp" />
+    <ClCompile Include="Sophia\AutoDebugger\Targets\AutoDebugTarget.cpp" />
+    <ClCompile Include="Sophia\AutoDebugger\Targets\DebugTargetRegistry.cpp" />
+    <ClCompile Include="Sophia\Database\AutoDebugStore.cpp" />
+    <ClCompile Include="Sophia\AutoDebugger\AutoDebugTool.cpp" />
+    <ClCompile Include="Sophia\Deobfuscator\Deobfuscator.cpp" />
+    <ClCompile Include="Sophia\DumpTool.cpp" />
+    <ClCompile Include="HyperDBG\HyperDbgMemory.cpp" />
+    <ClCompile Include="HyperDBG\HyperDbgProcessMonitor.cpp" />
+    <ClCompile Include="HyperDBG\HyperDbgSession.cpp" />
+    <ClCompile Include="HyperDBG\HyperDbgSessionBase.cpp" />
+    <ClCompile Include="HyperDBG\HyperDbgTrace.cpp" />
+    <ClCompile Include="HyperDBG\PTAnalysis.cpp" />
+    <ClCompile Include="HyperDBG\ServiceUtil.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Sophia\WinPE\PEDumper.cpp" />
+    <ClCompile Include="Sophia\WinPE\PEScan.cpp" />
+    <ClCompile Include="Sophia\PTTextRebuilder.cpp" />
+    <ClCompile Include="Sophia\WinPE\SectionManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="HyperDBG\PTParseUtil.h" />
+    <ClInclude Include="Sophia\Deobfuscator\DeobfContext.h" />
+    <ClInclude Include="Sophia\Deobfuscator\DeobfEncoders.h" />
+    <ClInclude Include="Sophia\Deobfuscator\DeobfIO.h" />
+    <ClInclude Include="Sophia\Deobfuscator\DeobfValClassifier.h" />
+    <ClInclude Include="Sophia\Deobfuscator\Targets\Constants\ArithConstTarget.h" />
+    <ClInclude Include="Sophia\Deobfuscator\Targets\ControlFlow\CallParamTarget.h" />
+    <ClInclude Include="Sophia\Deobfuscator\Targets\ControlFlow\CFGWalkTarget.h" />
+    <ClInclude Include="Sophia\Deobfuscator\Targets\ControlFlow\CompareTarget.h" />
+    <ClInclude Include="Sophia\Deobfuscator\Targets\DeobfuscationTarget.h" />
+    <ClInclude Include="Sophia\Deobfuscator\Targets\ControlFlow\IATTarget.h" />
+    <ClInclude Include="Sophia\Deobfuscator\Targets\ControlFlow\IndBranchTarget.h" />
+    <ClInclude Include="Sophia\Deobfuscator\Targets\Constants\LEAConstTarget.h" />
+    <ClInclude Include="Sophia\Deobfuscator\Targets\Constants\MovConstTarget.h" />
+    <ClInclude Include="Sophia\Deobfuscator\Targets\ControlFlow\OpaqueJCCTarget.h" />
+    <ClInclude Include="Sophia\Deobfuscator\Targets\ControlFlow\ROPTarget.h" />
+    <ClInclude Include="Sophia\Deobfuscator\Targets\Strings\StringBufferTarget.h" />
+    <ClInclude Include="Sophia\Deobfuscator\Targets\SyscallParamTarget.h" />
+    <ClInclude Include="Sophia\Deobfuscator\Targets\Strings\VecRedirectTarget.h" />
+    <ClInclude Include="Sophia\Environment\AppConfig.h" />
+    <ClInclude Include="Sophia\Environment\AppConfigHelpers.h" />
+    <ClInclude Include="Sophia\AutoDebugger\AutoDebugHits.h" />
+    <ClInclude Include="Sophia\AutoDebugger\AutoDebugPEUtils.h" />
+    <ClInclude Include="Sophia\AutoDebugger\AutoDebugUtils.h" />
+    <ClInclude Include="Sophia\AutoDebugger\Targets\ArithDebugTarget.h" />
+    <ClInclude Include="Sophia\AutoDebugger\Targets\BranchDebugTarget.h" />
+    <ClInclude Include="Sophia\AutoDebugger\Targets\CallDebugTarget.h" />
+    <ClInclude Include="Sophia\AutoDebugger\Targets\CompareDebugTarget.h" />
+    <ClInclude Include="Sophia\AutoDebugger\Targets\DebugTarget.h" />
+    <ClInclude Include="Sophia\AutoDebugger\Targets\DebugTargetRegistry.h" />
+    <ClInclude Include="Sophia\AutoDebugger\Targets\IndBranchDebugTarget.h" />
+    <ClInclude Include="Sophia\AutoDebugger\Targets\IndCallDebugTarget.h" />
+    <ClInclude Include="Sophia\AutoDebugger\Targets\LEADebugTarget.h" />
+    <ClInclude Include="Sophia\AutoDebugger\Targets\MovDebugTarget.h" />
+    <ClInclude Include="Sophia\AutoDebugger\Targets\StringDebugTarget.h" />
+    <ClInclude Include="Sophia\AutoDebugger\Targets\SyscallDebugTarget.h" />
+    <ClInclude Include="Sophia\AutoDebugger\Targets\VecDebugTarget.h" />
+    <ClInclude Include="Sophia\CLIHelpers.h" />
+    <ClInclude Include="Sophia\Database\AutoDebugStore.h" />
+    <ClInclude Include="Sophia\AutoDebugger\AutoDebugTool.h" />
+    <ClInclude Include="Sophia\Deobfuscator\Deobfuscator.h" />
+    <ClInclude Include="Sophia\DumpTool.h" />
+    <ClInclude Include="HyperDBG\HyperDbgMemory.h" />
+    <ClInclude Include="HyperDBG\HyperDbgProcessMonitor.h" />
+    <ClInclude Include="HyperDBG\HyperDbgSession.h" />
+    <ClInclude Include="HyperDBG\HyperDbgSessionBase.h" />
+    <ClInclude Include="HyperDBG\HyperDbgTrace.h" />
+    <ClInclude Include="HyperDBG\PTAnalysis.h" />
+    <ClInclude Include="HyperDBG\ServiceUtil.h" />
+    <ClInclude Include="Pch.h" />
+    <ClInclude Include="Sophia\PTTextHelpers.h" />
+    <ClInclude Include="Sophia\WinPE\PEDumper.h" />
+    <ClInclude Include="Sophia\WinPE\PEScan.h" />
+    <ClInclude Include="Sophia\PTTextRebuilder.h" />
+    <ClInclude Include="Sophia\WinPE\PEScanHelpers.h" />
+    <ClInclude Include="Sophia\WinPE\SectionManager.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
